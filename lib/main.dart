@@ -4,8 +4,6 @@ import 'package:dogs/core_data/dio_settings.dart';
 import 'package:dogs/repo/animals_repository.dart';
 import 'package:dogs/ui/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main(List<String> args) {

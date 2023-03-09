@@ -1,6 +1,7 @@
 
 
-import 'package:dogs/bloc/get_dogs_bloc.dart';
+import 'package:dogs/bloc/animal_event.dart';
+import 'package:dogs/bloc/animal_state.dart';
 import 'package:dogs/repo/animals_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

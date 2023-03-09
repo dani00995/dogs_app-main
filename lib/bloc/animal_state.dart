@@ -1,6 +1,6 @@
-part of 'get_dogs_bloc.dart';
 
-@immutable
+import 'package:dogs/models/all_models.dart';
+
 abstract class AnimalState {}
 
 class AnimalInitial extends AnimalState {}

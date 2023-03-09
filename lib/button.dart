@@ -59,7 +59,7 @@ class _CustomSlidingToggleState extends State<CustomSlidingToggle> {
                           curve: Curves.easeOutQuad,
                           child: Text(
                             widget.leftLabel,
-                            style: TextStyle(),
+                            style: const TextStyle(),
                           ),
                         ),
                       ),
@@ -73,7 +73,7 @@ class _CustomSlidingToggleState extends State<CustomSlidingToggle> {
                         curve: Curves.easeOutQuad,
                         child: Text(
                           widget.rightLabel,
-                          style: TextStyle(),
+                          style: const TextStyle(),
                         ),
                       ),
                     ),
@@ -103,11 +103,11 @@ class _CustomSlidingToggleState extends State<CustomSlidingToggle> {
                               ? Text(
                                   widget.leftLabel,
                                   key: ValueKey(widget.leftLabel),
-                                  style: TextStyle(),
+                                  style: const TextStyle(),
                                 )
                               : Text(widget.rightLabel,
                                   key: ValueKey(widget.rightLabel),
-                                  style: TextStyle()),
+                                  style: const TextStyle()),
                         ),
                       ),
                     ),

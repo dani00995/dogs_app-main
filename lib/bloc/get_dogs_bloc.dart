@@ -1,10 +1,10 @@
-import 'package:bloc/bloc.dart';
-import 'package:dogs/models/all_models.dart';
-import 'package:dogs/repo/animals_repository.dart';
-import 'package:meta/meta.dart';
 
-part 'animal_event.dart';
-part 'animal_state.dart';
+import 'package:dogs/bloc/animal_event.dart';
+import 'package:dogs/bloc/animal_state.dart';
+import 'package:dogs/repo/animals_repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+
 
 class GetDogsBloc extends Bloc<AnimalEvent, AnimalState> {
   GetDogsBloc({required this.repo}) : super(AnimalInitial()) {

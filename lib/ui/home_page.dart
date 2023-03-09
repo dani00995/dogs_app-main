@@ -1,9 +1,9 @@
+import 'package:dogs/bloc/animal_event.dart';
+import 'package:dogs/bloc/animal_state.dart';
 import 'package:dogs/bloc/get_cats_bloc.dart';
 import 'package:dogs/bloc/get_dogs_bloc.dart';
 import 'package:dogs/button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:numberpicker/numberpicker.dart';
 
@@ -16,7 +16,7 @@ class HomePageScreen extends StatefulWidget {
 
 class _HomePageScreenState extends State<HomePageScreen> {
   int _currentIndex = 0;
-  List<Widget> pages = [DogsPage(), CatsPage()];
+  List<Widget> pages = [const DogsPage(), const CatsPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
             onChange: (val) {
               _currentIndex = val;
               setState(() {});
-              print(val);
+
             },
           ),
         ),
@@ -111,7 +111,7 @@ class CatsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      int _currentVal = 1;
+      int currentVal = 1;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -121,9 +121,9 @@ class CatsPage extends StatelessWidget {
               NumberPicker(
                   minValue: 1,
                   maxValue: 50,
-                  value: _currentVal,
+                  value: currentVal,
                   onChanged: (val) {
-                    _currentVal = val;
+                    currentVal = val;
                   }),
               ElevatedButton(
                 onPressed: () {
@@ -145,12 +145,13 @@ class CatsPage extends StatelessWidget {
                 return Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
+                      height: 300,
                       decoration: const BoxDecoration(
                         color: Colors.green,
                       ),
                       child: Image.network(
                         state.modelCat?.file?? '',
-                        fit: BoxFit.fitWidth,
+                        fit: BoxFit.fill,
                       ),
                     ),
                   );
